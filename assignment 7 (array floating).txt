@@ -1,0 +1,94 @@
+#Write a Python program to store first year percentage of students in array.
+#Write function for sorting array of floating point numbers in ascending order using
+#a) Selection Sort
+#b) Bubble sort and display top five scores.
+
+Def add_Elements(arr,n):
+
+Flag=False
+Print(“Enter Array Elements :”)
+For I in range(0,n):
+Num=int(input())
+Arr.append(num)
+Print(“Array Elements are:”)
+Print(arr)
+Return arr
+
+Def bubble_sort(arr,n):
+For I in range(0,n):
+For j in range(0,n-1):
+If(arr[j]>arr[j+1]):
+Temp=arr[j]
+Arr[j]=arr[j+1]
+Arr[j+1]=temp
+Print(“sorted elements using bubble sort….”)
+Print(arr)
+
+Def selection_sort(arr,n):
+For I in range(0,n-1):
+For j in range(i+1,n):
+If(arr[i]>arr[j]):
+Temp=arr[i]
+Arr[i]=arr[j]
+Arr[j]=temp
+Print(“sorted elements using selection sort….”)
+Print(arr)
+
+If __name__==”__main__”:
+Arr=[]
+N=0
+
+Print(“1.Insert array elements….”)
+Print(“2.display array elements….”)
+Print(“3.Bubble sort…”)
+Print(“3.Selection sort…”)
+While(True):
+Print(“enter choice:”)
+Ch=int(input())
+
+If ch==1:
+N=int(input(“how many number do you want to add…”))
+Arr=add_Elements(arr,n)
+Elif ch==2:
+Bubble_sort(arr,n)
+Elif ch==3:
+Selection_sort(arr,n)
+
+Else:
+Print(“wrong choice…”)
+Break
+
+Output
+1.Insert array elements….
+2.display array elements….
+3.Bubble sort…
+3.Selection sort…
+Enter choice:
+1
+How many number do you want to add…7
+Enter Array Elements :
+10
+12
+24
+54
+67
+1
+50
+Array Elements are:
+[10, 12, 24, 54, 67, 1, 50]
+Enter choice:
+2
+Sorted elements using bubble sort….
+[1, 10, 12, 24, 50, 54, 67]
+Enter choice:
+3
+Sorted elements using selection sort….
+
+[1, 10, 12, 24, 50, 54, 67]
+Enter choice:
+4
+Wrong choice…
+
+[Program finished]
+
+

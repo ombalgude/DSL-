@@ -1,0 +1,342 @@
+ASSIGNMENT NO. :3
+
+PROGRAM;
+
+def
+
+def
+
+def
+
+def
+
+long_Word():
+Stri=inpyt "E to.
+vordsestrd spysor tine .
+long_words=[]
+length=g
+for i in words:
+len_word=1len(i)
+1¥(1en_word>=1ength)-
+length=1en_worg
+long_word. append(1)
+
+Print ("longest word:")
+for 1 in long worg:
+
+Print(i,end="\t")
+print()
+
+char_Occur():
+Stri=input ("enter string")
+count=9
+flag=0
+ch=input ("Enter char:")
+for i in range(len(stri)):
+if (ch==stri[i]):
+count+=1
+flag=1
+
+print("character occurence”, count)
+
+str_Pallindrome():
+
+strl=input ("Enter string")
+stri=""
+
+for i in range(0,len(str1)):
+
+str2=stri[i]+str2
+
+print("Reverse of string:",str2)
+
+if str2==stri:
+
+print(stri,"is palindrome....")
+
+else:
+
+print(strl, "is not palindrome....")
+
+subString_Appearance():
+strl=input("Enter String")
+words=strl.split()
+count=0
+for i in words:
+
+try:
+
+print(i, "appears in string at index ",count)
+while(stri[count]!=" '):
+
+count+=1
+except:
+
+print("Exception caught...”)
+
+(FE Scanned with OKEN Scanner
+count+=1
+
+def word_Occur():
+
+s=input("Enter string")
+
+words = s.split()
+u_words = [] |
+
+word_counts = []
+
+for word in words:
+flag = False
+
+for i in range(len(u_words)):
+
+if word == u_words[i]:
+word_counts[i] += 1
+flag = True
+break
+if not flag:
+
+u_words.append (word)
+word_counts.append(1)
+
+for i in range(len(u_words)):
+print(u_words[i],":",word_counts[i])
+
+iF —name__=="__main__":
+#stri=""
+print("1.Longest Word....")
+
+print("2.Display Occurance of Particular Character...")
+print("3.String is Palindrome...")
+print(“4.First Appearance of subString ...")
+
+print("5.0ccurance of each word in String ves)
+while(True):
+
+print("enter choice:")
+ch=int(input())
+if ch==1;
+
+long _Word()
+
+elif ch==2:
+char_Occur()
+elif ch==3:
+str_Pallindrome()
+elif ch==4:
+subString_Appearance()
+elif ch==5:
+word_Occur()
+else:
+print( "wrong choice...")
+break
+
+(FE Scanned with OKEN Scanner
+ASSIGNMENT NO. 4
+
+PROGRAM:
+
+def
+
+def
+
+def
+
+def
+
+add _data(pb):
+name=input (“Enter name..")
+number=int(input(“Enter mobile number®))
+flag=False
+for i in range(len(pb)):
+if name < pb[i][0Q]:
+pb.insert(i, (name, number))
+flag = True
+break
+if not flag:
+pb.append( (name, number))
+
+return pb
+display(pb):
+
+for ¢ in pb:
+print(c)
+
+bin_search(pb):
+
+name=input ("Enter name to search:”)
+
+length=1len(pb)
+
+1=0
+
+r=length-1
+
+flag=0
+
+while(1l<=r):
+mid=(1+r)//2
+if(name==pb[mid][@]):
+
+print("name=",name, "and mob number is:",pb[mid][1])
+
+flag=1
+break
+elif name<pb[mid][@]:
+r=mid-1
+flag=0
+else:
+1=mid+1
+flag=0
+
+if flag==0:
+
+print(name, "is not in list....add the name")
+
+add_data(pb)
+display(pb)
+
+rec_BinSearch(pb,1,r,name):
+if re:
+print("name is not in the list")
+add_data(pb)
+display(pb)
+print("name is added in the list")
+else:
+
+(FE Scanned with OKEN Scanner
+mid=(1+r)//2
+if (name==pb[mid][0]):
+
+print("name=",name, "and mob number is:",pb[mid][1])
+elif namec<pbmid][e]:
+
+rec_BinSearch(pb,1,mid-1, name)
+else:
+
+rec_BinSearch(pb,mid+1,r, name)
+
+if ~nhame__=="_ main_ ":
+pb=[]
+print("1.Insert name and mobile number....")
+
+print("2.display name and mobile number....")
+print(*3.Search teiend, ..")
+while(True):
+
+print(“enter choice:")
+ch=int(input())
+
+if ch==1:
+pb=add_data(pb)
+
+elif ch==2;
+display(pb)
+elif ch==3;
+bin_search(pb)
+elif ch==4:
+name=input("Enter name to search:")
+
+rec_BinSearch(pb,@,len(pb)-1, name)
+else:
+
+print(“"wrong choice...")
+break
+
+(FE Scanned with OKEN Scanner
+ASSIGNMENT NO. 5
+PROGRAM:
+
+def add_data(pb):
+name=input(“Enter name..")
+
+number=int (input ("Enter mobile number") )
+flag=False
+for i in range(len(pb)):
+if name < pb[i][0]:
+pb.insert(i, (name, number))
+flag = True
+break
+if not flag:
+pb.append( (name, number) )
+
+return pb
+def display(pb):
+
+for ¢ in pb:
+print(c)
+
+def fib_search(pb):
+name=input("Enter name to search:")
+
+1 = len(pb)
+
+elim = -1
+
+f2 =0 #Two finbonacci numbers before fn
+fl =1 #0ne finonacci numbers before fn
+fn = f1+f2
+
+flag=0
+
+while fn<=1:
+tl, 2 = fn, +1
+fn = f1+f2
+
+while fn>1:
+
+curr = min(elim+f2,1-1)
+
+print(curr,"” 0 Ta EE
+if pb[curr][@] == name:
+flag=1
+
+print(name,"is present at location", curr)
+print(pb[curr][0]," ",pb[curr][1])
+break
+
+elif pb[curr][@] > name:
+
+fn = £2
+
+HH = ¥l = £32
+
+2 2%2 - £1
+else:
+
+fn = fl
+
+(FE Scanned with OKEN Scanner
+fl «(2
+2 «fn - 1}
+elim = cure
+
+if flags=0: :
+print (“name 1s not in the 1st... 7)
+
+If name ==" main
+pbe(]
+print("1. Insert name and mobile number... )
+print ("2.display name and moblle number, ...")
+print("3. Search friend... ")
+while(True):
+
+print(“enter cholcei™)
+cheint(input())
+
+If cheel:
+pbeadd_data(pb)
+
+elif chmw2:
+display(pb)
+
+elif che=3:
+fib_search(pb)
+
+else:
+print("wrong choice...")
+
+break
+
+(FE Scanned with OKEN Scanner

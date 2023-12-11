@@ -1,0 +1,106 @@
+Def rem_dup(d):
+List=[]
+For I in d:
+If (I not in list):
+List.append(i)
+Return list
+
+Def CB(cr,bd):
+Print(“…”)
+Cp=[]
+For st in cr:
+If st in bd:
+Cp.append(st)
+Print(“Student plays cricket and Badminton”,cp)
+
+Def eCoB(cr,bd):
+Print(“….”)
+Cp=[]
+For st in cr:
+If st not in bd:
+Cp.append(st)
+For st in bd:
+If st not in cr:
+Cp.append(st)
+Print(“Student plays either play cricket or Badminton but not both”,cp)
+
+Def nCnB(cr,bd):
+Print(“….”)
+
+Cp=[]
+For st in ft:
+If st not in cr and st not in bd:
+Cp.append(st)
+Print(“Student plays neither cricket nor Badminton “,cp)
+
+Def CFnB(cr,ft,bd):
+Print(“….”)
+Cp=[]
+For st in cr:
+If st in ft and st not in bd:
+Cp.append(st)
+Print(“Student plays cricket or football but not Badminton “,cp)
+
+Seco=[]
+N=int(input(“Enter number of stud..”))
+Print(“Enter name of stud….”)
+For I in range(0,n):
+Name=input()
+Seco.append(name)
+
+Cr=[]
+N=int(input(“Enter number of stud plays cricket..”))
+Print(“Enter name of stud….”)
+For I in range(0,n):
+Name=input()
+Cr.append(name)
+
+Ft=[]
+N=int(input(“Enter number of stud plays football..”))
+Print(“Enter name of stud….”)
+For I in range(0,n):
+Name=input()
+Ft.append(name)
+
+Bd=[]
+N=int(input(“Enter number of stud plays badminton..”))
+Print(“Enter name of stud….”)
+For I in range(0,n):
+Name=input()
+Bd.append(name)
+
+Print(“student list…”,seco)
+Print(“student list who plays cricket”,cr)
+Print(“student list who plays football”,ft)
+Print(“student list who plays badminton”,bd)
+
+Ch=’y’
+While(ch!=’n’):
+Print(“\n\n--------------------MENU--------------------\n”)
+Print(“1. List of students who play both cricket and badminton”)
+Print(“2. List of students who play either cricket or badminton but not both”)
+
+Print(“3. List of students who play neither cricket nor badminton”)
+Print(“4. Number of students who play cricket and football but not badminton”)
+Print(“5. Exit\n”)
+Ch=int(input(“Enter your Choice (from 1 to 5) :”))
+
+If ch==1:
+Print(“Number of students who play both cricket and badminton : “, CB(cr,bd))
+
+Elif ch==2:
+Print(“Number of students who play either cricket or badminton but not both : “, eCoB(cr,bd))
+
+Elif ch==3:
+Print(“Number of students who play neither cricket nor badminton : “, nCnB(seco,cr,bd))
+
+Elif ch==4:
+Print(“Number of students who play cricket and football but not badminton : “, CFnB(cr,ft,bd))
+
+Else:
+Print(“wrong choice..”)
+
+Print(“do you want to continue……”)
+Ch=input()
+
+

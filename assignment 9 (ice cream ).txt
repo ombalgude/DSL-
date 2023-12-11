@@ -1,0 +1,270 @@
+//Second year Computer Engineering class, set A of students like Vanilla Ice-cream and set
+// B of students like butterscotch ice-cream. Write C++ program to store two sets using
+//linked list. Compute and display
+//a) Set of students who like both vanilla and butterscotch
+//b) Set of students who like either vanilla or butterscotch or not both
+//c) Number of students who like neither vanilla nor butterscotch
+
+#include<iostream>
+#include<vector>
+Using namespace std;
+
+Class node{
+Public:
+String name;
+Char van,but;
+Node *next;
+Node(){
+Next = nullptr;
+}
+};
+Class List
+{
+Node *head;
+Public:
+List()
+{
+Head = NULL;
+}
+
+Void insertAtEnd(string s,char v,char b)
+
+{
+Node *p = new node();
+p->van = v;
+p->name=s;
+p->but=b;
+if (head == NULL)
+{
+Head = p;
+}
+Else
+{
+
+Node *ptr = head;
+While (ptr->next != NULL)
+{
+Ptr = ptr->next;
+}
+Ptr->next = p;
+}
+}
+
+Void display()
+{
+Int count=0;
+If (head == NULL){
+Cout<<”List is empty”<<endl;
+
+}
+Else
+{
+
+Node *p = head;
+Cout<<”Linked List: \n”;
+While (p != NULL){
+Cout<<p->name<<”\t”<<p->van<<”\t”<<p->but<<”\n”;
+Count++;
+P = p->next;
+}
+
+}
+Cout<<”Number of elemnets in linked list:”<<count;
+}
+Void disp_vanAndbut()
+{
+//int count=0;
+If (head == NULL){
+Cout<<”List is empty”<<endl;
+}
+Else
+{
+
+Node *p = head;
+Cout<<”students who like both vanila and butterscotch…….\n”;
+While (p != NULL)
+{
+
+If(p->van==’y’ && p->but==’y’)
+{
+Cout<<p->name<<”\t”<<p->van<<”\t”<<p->but<<”\n”;
+//count++;
+}
+P = p->next;
+}
+
+}
+//cout<<”Number of elemnets in linked list:”<<count;
+}
+Void disp_EitherVanOrBut()
+{
+//int count=0;
+If (head == NULL){
+Cout<<”List is empty”<<endl;
+}
+Else
+{
+
+Node *p = head;
+Cout<<”Students who like Either vanila Or Butterscotch…….\n”;
+While (p != NULL)
+{
+
+If(!((p->van==’y’ && p->but==’y’)||(p->van==’n’ && p>but==’n’)))
+{
+Cout<<p->name<<”\n”;
+
+//count++;
+}
+P = p->next;
+}
+
+}
+//cout<<”Number of elemnets in linked list:”<<count;
+}
+Void disp_NitherVanNorBut()
+{
+//int count=0;
+If (head == NULL){
+Cout<<”List is empty”<<endl;
+}
+Else
+{
+
+Node *p = head;
+Cout<<”Students who like Either vanila Or Butterscotch…….\n”;
+While (p != NULL)
+{
+
+If(p->van==’n’ && p->but==’n’)
+{
+Cout<<p->name<<”\n”;
+//count++;
+}
+P = p->next;
+}
+
+}
+//cout<<”Number of elemnets in linked list:”<<count;
+}
+
+};
+
+Int main()
+{
+
+Printf(“1 to Insert data…”);
+Printf(“\n2 Display data…..”);
+Printf(“\n3 Display Students who like both vanila and butterscotch……”);
+Printf(“\n4 Display Students who like Either Vanila Or Butterscotch……”);
+Printf(“\n4 Display Students who like Nither Vanila Nor Butterscotch……”);
+Printf(“\n0 to Exit”);
+
+Int choice,p;
+Char van,but;
+String nm;
+List ll;
+
+Do
+{
+Cout<<”\nEnter Your Choice: “;
+Cin>>choice;
+Switch (choice)
+{
+
+Case 1:
+Cout<<”Enter name: “;
+Cin>>nm;
+Cout<<”Do you like vanilla y/n: “;
+Cin>>van;
+Cout<<”Do you like butterscotch y/n: “;
+Cin>>but;
+ll.insertAtEnd(nm,van,but);
+break;
+
+case 2:
+ll.display();
+break;
+
+case 3:
+ll.disp_vanAndbut();
+break;
+
+case 4:
+ll.disp_EitherVanOrBut();
+break;
+case 5:
+ll.disp_NitherVanNorBut();
+break;
+
+}
+} while (choice != 0);
+
+}
+
+Output
+1 to Insert data…
+2 Display data…..
+3 Display Students who like both vanila and butterscotch……
+4 Display Students who like Either Vanila Or Butterscotch……
+5 Display Students who like Nither Vanila Nor Butterscotch……
+0 to Exit
+Enter Your Choice: 1
+Enter name: Soham
+Do you like vanilla y/n: n
+Do you like ;butterscotch y/n: y
+
+Enter Your Choice: 1
+Enter name: Geetesh
+Do you like vanilla y/n: n
+Do you like ;butterscotch y/n: n
+
+Enter Your Choice: 1
+Enter name: Srujan
+Do you like vanilla y/n: y
+Do you like ;butterscotch y/n: n
+
+Enter Your Choice: 1
+Enter name: Sanket
+Do you like vanilla y/n: y
+Do you like ;butterscotch y/n: y
+
+Enter Your Choice: 2
+Linked List:
+Soham n
+
+y
+
+Geetesh n
+
+n
+
+Srujan y
+
+n
+
+Sanket y
+
+y
+
+Number of elemnets in linked list:4
+Enter Your Choice: 3
+Students who like both vanila and butterscotch…….
+Sanket y
+
+y
+
+Enter Your Choice: 4
+Students who like Either vanila Or Butterscotch…….
+Soham
+Srujan
+
+Enter Your Choice: 5
+Students who like Either vanila Or Butterscotch…….
+Geetesh
+
+Enter Your Choice: 0
+
+[Program finished]
+
+

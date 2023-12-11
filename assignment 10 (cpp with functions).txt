@@ -1,0 +1,132 @@
+/* *****Assignment 10****
+
+Write c++ program with functions:
+To print original string followed by reversed string using stack and
+To check given string is Palindrome or not…..
+
+*/
+
+#include<iostream>
+Using namespace std;
+#include<string>
+#define max 50
+Char stk[max];
+Class stack
+{
+Int top=-1;
+Public:
+
+Void push(string ch)
+{
+If(top==max-1)
+{
+Cout<<”Stack is full…..\n”;
+}
+Else
+{
+For (int i=0;i<ch.length();i++)
+{
+Top++;
+
+Stk[top]=ch[top];
+}
+
+}
+}
+
+String pop(string str)
+{
+String rev=””;
+Cout<<stk;
+If(top==-1)
+Cout<<”Stack is Empty….”;
+Else
+{
+For(int i=top;i>=0;i--)
+{
+Cout<<stk[top];
+Rev=rev+stk[top];
+Top--;
+}
+
+}
+Cout<<”\n Top is:”<<top;
+Return rev;
+}
+
+};
+
+Int main()
+
+{
+
+String str,rev,str1;
+Int c;
+Stack s1;
+Do
+{
+Cout<<”\n\n Select from Menu………..”;
+Cout<<”\n1. Print Original String followed by reversed String using Stack…..”;
+Cout<<”\n2: To check given string is Palindrome or not…..”;
+Cout<<”\n3: Press 0 to Exit……”;
+Cout<<”\nEnter your choice:”;
+Cin>>c;
+Switch©
+{
+Case 1:
+Cout<<”\nEnter String:”;
+Cin>>str;
+Cout<<”\nString is: “;
+S1.push(str);
+Rev=s1.pop(str);
+Break;
+Case 2:
+Cout<<”\nOriginal String:”<<str;
+Cout<<”\nReversed String :”<<rev;
+If(str==rev)
+{
+Cout<<”\nString “<<str<<” is Palindrome……”;
+
+}
+Else
+Cout<<”\nString “<<str<<” is not Palindrome……”;
+Break;
+
+}
+
+}while(c!=0);
+
+}
+
+Output
+Select from Menu...........
+1. Print Original String followed by reversed String using Stack.....
+2: To check given string is Palindrome or not.....
+3: Press 0 to Exit......
+Enter your choice:1
+
+Enter String:nitin
+
+String is: nitinnitin
+Top is:-1
+
+Select from Menu...........
+1. Print Original String followed by reversed String using Stack.....
+
+2: To check given string is Palindrome or not.....
+3: Press 0 to Exit......
+Enter your choice:2
+
+Original String:nitin
+Reversed String :nitin
+String nitin is Palindrome......
+
+Select from Menu...........
+1. Print Original String followed by reversed String using Stack.....
+2: To check given string is Palindrome or not.....
+3: Press 0 to Exit......
+Enter your choice:0
+
+[Program finished]
+
+

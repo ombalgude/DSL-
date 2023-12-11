@@ -1,0 +1,111 @@
+Assignment No. 2
+program:
+
+def get_marks(n):
+marks = []
+for i in range(n):
+while True:
+try:
+mark = float(input(f"Enter the marks for student {i + 1}: "))
+if mark >= @ and mark <= 100:
+marks .append(mark)
+break
+else:
+print("Invalid input! Marks should be between © and 1€0.")
+except ValueError:
+print("Invalid input! Please enter a valid numeric value.")
+return marks
+def calculate_average(marks):
+sums=0
+if not marks:
+return @
+else:
+for i in marks:
+sums=sums+1i
+return sums / len{(marks)
+def find_highest_score(marks,n):
+maximum=marks[@]
+if not marks:
+return None
+else:
+for i in range(1,n):
+if(marks[i]>maximum):
+maximum=marks[i]
+return maximum
+def find_lowest_score(marks,n):
+minimum=marks[@]
+if not marks:
+return None
+else:
+for i in range(1,n):
+if(marks[i]<minimum):
+minimum=marks[i]
+return minimum
+def count_absent_students(marks):
+n = int(input("Enter the total number of students in the class: *))
+return n - len(marks) h
+def find_freq(marks):
+if not marks:
+return None
+else:
+max_freq = ©
+res = marks{[0]
+for 1 in marks:
+freq = marks.count(i)
+if freq > max_freq:
+max_fregq= freq
+res = 1
+return res
+if( _name__ == "_main_"):
+n = int(input("Enter the number of students: “))
+marks = get_marks(n)
+print("Average score of the class:", calculate_average(marks))
+print("Highest score of the class:", find_highest_score(marks,n))
+print(“Lowest score of the class:", find_lowest_score(marks,n))
+print(“"Count of students who were absent for the test:",
+count_absent_students(marks))
+print(*Mark(s) with the highest frequency:*, find_freq(marks))
+Output:
+
+Enter the number of students: 15
+
+Enter the marks for student 1: 20
+
+Enter the marks for student 2: 25
+
+Enter the marks for student 3: 45
+
+Enter the marks for student 4: 30
+
+Enter the marks for student 5: 25
+
+Enter the marks for student 6: 25
+
+Enter the marks for student 7: 55
+
+Enter the marks for student 8: 95
+
+Enter the marks for student 9: 8@
+
+Enter the marks for student 10: 13
+
+Enter the marks for student 11: 75
+
+Enter the marks for student 12: 60
+
+Enter the marks for student 13: 50
+
+Enter the marks for student 14: 75
+
+Enter the marks for student 15: 35
+
+Average score of the class: 1.3333333333333333
+Highest score of the class: 95.0
+
+Lowest score of the class: 13.0
+
+Enter the total number of students in the class: 21
+count of students who were absent for the test: 6
+Mark(s) with the highest frequency: 25.0
+
+PS Ce \Users\mrina\OneDrive\Desktop\Coding\Python practical dsl»

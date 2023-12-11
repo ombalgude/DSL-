@@ -1,0 +1,303 @@
+//Write C++ program to maintain club
+//member 壮 information using singly linked list. Store student PRN and Name. Write
+//functions to:
+//a) Add and delete the members as well as president or even secretary.
+//b) Compute total number of members of club
+//c) Display members
+//d) Two linked lists exists for two divisions. Concatenate two lists
+
+#include<iostream>
+#include<vector>
+Using namespace std;
+
+Class node{
+Public:
+Int prn;
+String name;
+
+Node *next;
+Node(){
+Next = nullptr;
+}
+};
+Class List{
+Node *head;
+Public:
+List()
+{
+
+Head = NULL;
+}
+Void insertAtBeg(int v,string s)
+{
+Node *p = new node();
+p->prn = v;
+p->name=s;
+p->next = head;
+head = p;
+}
+Void insertAtEnd(int v,string s)
+
+{
+Node *p = new node();
+p->prn = v;
+p->name=s;
+if (head == NULL)
+{
+Head = p;
+}
+Else
+{
+
+Node *ptr = head;
+While (ptr->next != NULL)
+{
+Ptr = ptr->next;
+}
+Ptr->next = p;
+
+}
+}
+
+Void display()
+{
+Int count=0;
+If (head == NULL){
+Cout<<”List is empty”<<endl;
+}
+Else
+{
+
+Node *p = head;
+Cout<<”Linked List: \n”;
+While (p != NULL){
+Cout<<p->prn<<”\t”<<p->name<<”\n”;
+Count++;
+P = p->next;
+}
+
+}
+Cout<<”Number of elemnets in linked list:”<<count;
+}
+Void insertBetween(int v,string s, int pos){
+Node *p = new node();
+p->prn = v;
+p->name=s;
+if (pos == 0)
+{
+
+p->next = head;
+head = p;
+}
+Else
+{
+Node *ptr = head;
+While(pos>1)
+{
+Ptr = ptr->next;
+--pos;
+}
+p->next = ptr->next;
+ptr->next = p;
+}
+}
+Void deleteAtFirst()
+{
+If (head == NULL){
+Cout<<”List is Empty”<<endl;
+}
+Else
+{
+Cout<<”Element Deleted: “<<head->prn<<”\t”<<head->name<<endl;
+Node *p = head;
+Head = head->next;
+Delete(p);
+}
+}
+Void deleteAtEnd()
+
+{
+If (head == NULL){
+Cout<<”List is Empty”<<endl;
+}
+Else if (head->next == NULL)
+{
+
+Cout<<”Element Deleted: “<<head->prn<<”\t”<<head->name<<endl;
+Delete(head);
+Head = NULL;
+}
+Else
+{
+Node *p = head;
+
+While (p->next->next != NULL)
+{
+P = p->next;
+}
+
+Cout<<”Element Deleted: “<<p->next->prn<<endl;
+Delete(p->next);
+p->next = NULL;
+}
+}
+Void deleteInBetween(int pos)
+{
+If (head == NULL)
+{
+
+Cout<<”List is Empty”<<endl;
+}
+Else
+{
+Node *p, *ptr;
+If (pos == 0)
+{
+
+Cout<<”Element Deleted: “<<head->prn<<”\t”<<head>name<<endl;
+Ptr = head;
+Head = head->next;
+Delete(ptr);
+}
+Else
+{
+
+P = ptr = head;
+While(pos>0)
+{
+--pos;
+P = ptr;
+Ptr = ptr->next;
+}
+Cout<<”Element Deleted: “<<ptr->prn<<”\t”<<ptr>name<<endl;
+p->next = ptr->next;
+free(ptr);
+
+}
+}
+}
+};
+
+Int main()
+{
+
+Printf(“1 to Insert at the beginning”);
+Printf(“\n2 to Insert at the end”);
+Printf(“\n3 to Insert at mid”);
+Printf(“\n4 to Delete from beginning”);
+Printf(“\n5 to Delete from the end”);
+Printf(“\n6 to Delete from mid”);
+Printf(“\n7 to Display”);
+Printf(“\n0 to Exit”);
+
+Int choice,v,p;
+String nm;
+List ll;
+Do
+{
+Cout<<”\nEnter Your Choice: “;
+Cin>>choice;
+Switch (choice)
+{
+Case 1:
+Cout<<”Enter Element: “;
+Cin>>v;
+
+Cout<<”Enter name: “;
+Cin>>nm;
+ll.insertAtBeg(v,nm);
+break;
+
+case 2:
+cout<<”Enter Element: “;
+cin>>v;
+cout<<”Enter name: “;
+cin>>nm;
+ll.insertAtEnd(v,nm);
+break;
+
+case 3:
+cout<<”Enter Element: “;
+cin>>v;
+cout<<”Enter name: “;
+cin>>nm;
+cout<<”Enter Position ( zero-indexed ): “;
+cin>>p;
+ll.insertBetween(v,nm,p);
+break;
+
+case 4:
+ll.deleteAtFirst();
+break;
+
+case 5:
+ll.deleteAtEnd();
+
+break;
+
+case 6:
+cout<<”Enter Position ( zero-indexed ): “;
+cin>>p;
+ll.deleteInBetween(p);
+break;
+
+case 7:
+ll.display();
+break;
+
+}
+} while (choice != 0);
+
+}
+
+Output
+
+1 to Insert at the beginning
+2 to Insert at the end
+3 to Insert at mid
+4 to Delete from beginning
+5 to Delete from the end
+6 to Delete from mid
+7 to Display
+0 to Exit
+
+Enter Your Choice: 1
+Enter Element: 10
+Enter name: Soham
+
+Enter Your Choice: 2
+Enter Element: 20
+Enter name: Srujan
+
+Enter Your Choice: 3
+Enter Element: 13
+Enter name: Sanket
+Enter Position ( zero-indexed ): 1
+
+Enter Your Choice: 4
+Element Deleted: 10
+
+Soham
+
+Enter Your Choice: 3
+Enter Element: 30
+Enter name: Geetesh
+Enter Position ( zero-indexed ): 1
+Enter Your Choice: 6
+Enter Position ( zero-indexed ): 1
+Element Deleted: 30
+
+Geetesh
+
+Enter Your Choice: 5
+Element Deleted: 20
+Enter Your Choice: 7
+Linked List:
+13
+
+Sanket
+
+Number of elemnets in linked list:1
+Enter Your Choice: 0
+
+

@@ -1,0 +1,115 @@
+#Ternary search
+Def add_data(pb):
+Roll=int(input(“Enter roll number”))
+Name=input(“Enter name..”)
+Flag=False
+For I in range(len(pb)):
+If roll < pb[i][0]:
+Pb.insert(I, (roll, name))
+Flag = True
+Break
+If not flag:
+Pb.append((roll,name))
+
+Return pb
+
+Def display(pb):
+
+For c in pb:
+Print©
+Def Ternary_Search(pb):
+Roll_no=int(input(“Enter roll no search:”))
+Length=len(pb)
+L=0
+R=length-1
+Flag=0
+While(l<=r):
+
+# Calculate mid1 and mid2
+Mid1 = l + (r – l) // 3
+
+Mid2 = r – (r – l) // 3
+
+# Check if the element is present at the mid1 or mid2 positions
+If roll_no==pb[mid1][0]:
+Print(“roll number=”,roll_no,”and name is:”,pb[mid1][1])
+Print(pb[mid1][1], “is member of club….”)
+Flag=1
+Break
+Elif roll_no==pb[mid2][0]:
+Print(“roll number=”,roll_no,”and name is:”,pb[mid2][1])
+Print(pb[mid2][1], “is member of club….”)
+Flag=1
+Break
+
+# If x is in the left one-third
+Elif roll_no< pb[mid1][0]:
+R=mid1-1
+Flag=0
+
+# If x is in the right one-third
+Elif roll_no > pb[mid2][0]:
+L=mid2+1
+Flag=0
+# If x is in the middle one-third
+Else:
+L=mid1+1
+r-=mid2-1
+flag=0
+
+if flag==0:
+print(“Roll number”,roll_no,”is not in club….add the name”)
+add_data(pb)
+display(pb)
+
+if __name__==”__main__”:
+pb=[]
+print(“1.Insert roll number and name….”)
+print(“2.display roll number and name….”)
+print(“3.Search name…”)
+while(True):
+print(“enter choice:”)
+ch=int(input())
+
+if ch==1:
+pb=add_data(pb)
+
+elif ch==2:
+display(pb)
+elif ch==3:
+Ternary_Search(pb)
+
+Else:
+Print(“wrong choice…”)
+Break
+
+Output
+1.Insert roll number and name….
+2.display roll number and name….
+
+3.Search name…
+Enter choice:
+1
+Enter roll number37
+Enter name..ABC
+Enter choice:
+1
+Enter roll number38
+Enter name..PQRS
+Enter choice:
+1
+Enter roll number39
+Enter name..XYZ
+Enter choice:
+2
+(37, ‘ABC’)
+(38, ‘PQRS’)
+(39, ‘XYZ’)
+Enter choice:
+3
+Enter roll no search:38
+Roll number= 38 and name is: PQRS
+PQRS is member of club….
+Enter choice:
+
+
